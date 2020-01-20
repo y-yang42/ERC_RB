@@ -274,7 +274,7 @@ We get daily return of Wind A-Shares, S&P 500, China Treasury Bond Index, Nanhua
 
 The following figure shows the net value of the 6 assets mentioned above from 12/01/2004 to 08/01/2019.
 
-![sm_netValue_data](.\sm_netValue_data.png)
+![sm_netValue_data](\img\sm_netValue_data.png)
 
 Backtestings are performed during the time period from 12/01/2009 to 08/05/2009.
 
@@ -320,8 +320,6 @@ Backtestings are performed during the time period from 12/01/2009 to 08/05/2009.
 
 
 ![sm_weight_erc](.\sm_weight_erc.png)
-
-
 
 ![sm_weight_srs_nm_maxSR_26](.\sm_weight_srs_nm_maxSR_26.png)
 
