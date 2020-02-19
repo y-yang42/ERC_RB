@@ -53,6 +53,7 @@ SRS model is also tested with **momentum effect**, where the budget is set to ze
 
 
 
+
 Returns and volatility, and hence Sharpe ratio, are estimated by computing mean and standard deviation of daily returns from the past N months, where N is the time window
 
 
