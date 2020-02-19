@@ -23,25 +23,25 @@ Backtestings are performed from 12/01/2009 to 08/05/2009. Positions are changed 
 
 **Benchmark:** **Risk parity** model, also known as equally weighted risk contribution (**ERC**), risk budget for each asset is equal.
 
-<img src="fc1.png" width=25% class="center">
+<center><img src="fc1.png" width=25%></center>
 
 
 
 **Max Sharpe ratio (maxSR):** Risk budget is a linear combination of Sharpe ratios, which maximize portfolio's Sharpe ratio.
 
-<img src="fc2.png"  width=50% class="center">
+<center><img src="fc2.png" width=50%></center>
 
 
 
 **Squared Sharpe ratio (SRS):** Risk budget is proportional to squared Sharpe ratio, this formula is acquired when assuming zero correlation between assets.
 
-<img src="fc3.png"  width=15% class="center">
+<center><img src="fc3.png" width=10%></center>
 
 
 
 SRS model is also tested with **momentum effect**, where the budget is set to zero if estimated Sharp ratio of a asset is negative. In addition, we developed **Sharpe ratio budget (SRB)** model with momentum effect, where risk budget is proportional to squared Sharpe ratio.
 
-<img src="fc4.png"  width=15% class="center">
+<center><img src="fc4.png" width=10%></center>
 
 
 
