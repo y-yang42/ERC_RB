@@ -23,25 +23,33 @@ Backtestings are performed from 12/01/2009 to 08/05/2009. Positions are changed 
 
 **Benchmark:** **Risk parity** model, also known as equally weighted risk contribution (**ERC**), risk budget for each asset is equal.
 
-<center><img src="fc1.png" width=25%></center>
+<p align="center">
+  <img src="fc1.png" width=25%>
+</p>
 
 
 
 **Max Sharpe ratio (maxSR):** Risk budget is a linear combination of Sharpe ratios, which maximize portfolio's Sharpe ratio.
 
-<center><img src="fc2.png" width=50%></center>
+<p align="center">
+  <img src="fc2.png" width=60%>
+</p>
 
 
 
 **Squared Sharpe ratio (SRS):** Risk budget is proportional to squared Sharpe ratio, this formula is acquired when assuming zero correlation between assets.
 
-<center><img src="fc3.png" width=10%></center>
+<p align="center">
+  <img src="fc3.png" width=10%>
+</p>
 
 
 
 SRS model is also tested with **momentum effect**, where the budget is set to zero if estimated Sharp ratio of a asset is negative. In addition, we developed **Sharpe ratio budget (SRB)** model with momentum effect, where risk budget is proportional to squared Sharpe ratio.
 
-<center><img src="fc4.png" width=10%></center>
+<p align="center">
+  <img src="fc4.png" heighht=100>
+</p>
 
 
 
@@ -51,7 +59,7 @@ Returns and volatility, and hence Sharpe ratio, are estimated by computing mean 
 
 ### Result
 
-* **SRS** is a strengthened version of ERC **(6.6% vs 4.9%)**, maintaining most of the Sharpe ratio when getting higher return .
+* **SRS** is a strengthened version of ERC **(6.6% vs 4.9%)**, maintaining most of the Sharpe ratio when getting higher return.
 * **MaxSR** is difficult to implement in practice as correlations between assets are difficult to estimate.
 * **SRS and SRB with momentum** **(~8%)** are adapted version of momentum effect model, with more stability.  When comparing to original SRS model, they sacrifice some Sharpe ratio and get higher return. SRS with momentum generally has better performance than SRB with momentum.
 * **Higher return** of SRS, SRS with momentum and SRB with momentum is acquired during years **when equity securities have higher return**.
