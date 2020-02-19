@@ -23,7 +23,7 @@ Backtestings are performed from 12/01/2009 to 08/05/2009. Positions are changed 
 
 **Benchmark:** **Risk parity** model, also known as equally weighted risk contribution (**ERC**), risk budget for each asset is equal.
 
-<img src="fc1.png" style="zoom: 25%;" />
+<img src="fc1.png" style="zoom: 10%;" />
 
 
 
