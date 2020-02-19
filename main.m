@@ -13,7 +13,6 @@ import maxSR_volt.*
 import static.*
 
 load('data_origin.mat')
-%load('data_nanas0.mat')
 load('voltM_Aug.mat')
 
 load('monthCount.mat')
@@ -54,32 +53,7 @@ col = col+1;
 % output{3,col} = weight;
 % col = col+1;
 %%
-%span_test = 4;
 span_test = [4,6,8];
-
-% for span = span_test
-%     [netValue,weight] = srs_nm(data_origin, monthCount, startMonth, covSpan, span, rate);
-%     output{1,col} = sprintf('srs-%d',span);
-%     output{2,col} = netValue;
-%     output{3,col} = weight;
-%     col = col+1;
-% end
-% 
-% for span = span_test
-%     [netValue,weight] = srs_volt_nm(data_origin, monthCount, startMonth, covSpan, span, voltM, rate);
-%     output{1,col} = sprintf('srs-m-v-%d',span);
-%     output{2,col} = netValue;
-%     output{3,col} = weight;
-%     col = col+1;
-% end
-
-% for span = span_test
-%     [netValue,weight] = maxSR(data_origin, monthCount, startMonth, covSpan, span, rate);
-%     output{1,col} = sprintf('maxSR-%d',span);
-%     output{2,col} = netValue;
-%     output{3,col} = weight;
-%     col = col+1;
-% end
 
 for span = span_test
     [netValue,weight] = srs_volt(data_origin, monthCount, startMonth, covSpan, span, voltM, rate);
@@ -88,70 +62,6 @@ for span = span_test
     output{3,col} = weight;
     col = col+1;
 end
-
-
-%%
-% span_test = [2,4,6,8];
-% % span_test = [1,2,4,6,8,10,12];
-% for span = span_test
-%     [netValue,weight] = srs_volt_nm(data_origin, monthCount, startMonth, covSpan, span, voltM, rate);
-%     output{1,col} = sprintf('srs-v-%d',span);
-%     output{2,col} = netValue;
-%     output{3,col} = weight;
-%     col = col+1;
-% end
-% 
-% for span = span_test
-%     [netValue,weight] = maxSR_volt(data_origin, monthCount, startMonth, covSpan, span, voltM, rate);
-%     output{1,col} = sprintf('maxSRv%d',span);
-%     output{2,col} = netValue;
-%     output{3,col} = weight;
-%     col = col+1;
-% end
-% 
-% for span = span_test
-%     [netValue,weight] = srb_volt(data_origin, monthCount, startMonth, covSpan, span, voltM, rate);
-%     output{1,col} = sprintf('srbv%d',span);
-%     output{2,col} = netValue;
-%     output{3,col} = weight;
-%     col = col+1;
-% end
-% 
-% for span = span_test
-%     [netValue,weight] = srs_volt(data_origin, monthCount, startMonth, covSpan, span, voltM, rate);
-%     output{1,col} = sprintf('srsmv%d',span);
-%     output{2,col} = netValue;
-%     output{3,col} = weight;
-%     col = col+1;
-% end
-%%
-% weight_test = [
-% %     [10,6,3,1,0,0,0,0];
-% %     [4,3,2,1,0,0,0,0];
-% %     [6,5,4,3,2,1,0,0];
-% %     [10,6,3,3,1,1,0,0];
-% %     [20,12,6,6,2,2,1,1];
-%     [10,8,4,4,3,3,0,0];
-%     [20,12,2,2,6,6,1,1];
-%     [11,9,6,6,4,4,3,3];
-%     ];
-% for dWeight = weight_test'
-%     [netValue,weight] = srs_v_mu(data_origin, monthCount, startMonth, covSpan, voltM, dWeight', rate);
-%     output{1,col} = sprintf('%d',dWeight');
-%     output{2,col} = netValue;
-%     output{3,col} = weight;
-%     col = col+1;
-% end
-%%
-
-
-% for span = span_test
-%     [netValue,weight] = srs_nm(data_origin, monthCount, startMonth, covSpan, span, rate);
-%     output{1,col} = sprintf('srs_ns_%d',span);
-%     output{2,col} = netValue;
-%     output{3,col} = weight;
-%     col = col+1;
-% end
 
 % %span_test = [1,2,4,6,8,10,12];
 % span_test = [2,4,6,8];
@@ -163,7 +73,7 @@ end
 %     col = col+1;
 % end
 
-% % 1'π˙’Æ', 2'±Í∆’', 3'ÕÚA', 4'ƒœª™', 5'ª∆Ω', 6'∫„…˙'
+% % 1'ÂõΩÂÄ∫', 2'Ê†áÊôÆ', 3'‰∏áA', 4'ÂçóÂçé', 5'ÈªÑÈáë', 6'ÊÅíÁîü'
 % cmbW = [0,0,1,1,0,1];
 % for span = span_test
 %     [netValue,weight,cWeight] = srs_erc_volt(data_1, monthCount, startMonth, covSpan, span, voltM, rate, cmbW);
@@ -187,64 +97,6 @@ for weight = weight_test'
     output{3,col} = valueHist;
     col = col+1;
 end
-
-
-
-% for span = span_test
-%     [netValue,weight] = maxSR(data_origin, monthCount, startMonth, covSpan, span, rate);
-%     output{1,col} = sprintf('maxSR_%d',span);
-%     output{2,col} = netValue;
-%     output{3,col} = weight;
-%     col = col+1;
-% end
-
-%load('voltM_garch11_offset_tDstb')
-
-
-% [netValue,weight] = srs_SR(data_origin, monthCount, startMonth, covSpan, SRm, rate);
-% output{1,col} = 'srs_SRm';
-% output{2,col} = netValue;
-% output{3,col} = weight;
-% col = col+1;
-
-% [netValue,weight] = maxSR_SR(data_origin, monthCount, startMonth, covSpan, span, SRm, rate);
-% output{1,col} = 'maxSR_SRm';
-% output{2,col} = netValue;
-% output{3,col} = weight;
-% col = col+1;
-
-% for span = span_test
-%     [netValue,weight] = srs_cmpd(data_origin, monthCount, startMonth, covSpan, span, rate);
-%     output{1,col} = sprintf('srs_cmpd_%d',span);
-%     output{2,col} = netValue;
-%     output{3,col} = weight;
-%     col = col+1;
-% end
-
-
-% for span = span_test
-%     [netValue,weight] = maxSR_volt(data_origin, monthCount, startMonth, covSpan, span, voltM, rate);
-%     output{1,col} = sprintf('maxSR_volt_%d',span);
-%     output{2,col} = netValue;
-%     output{3,col} = weight;
-%     col = col+1;
-% end
-% 
-% span=4;
-% [netValue,weight] = srs_season(data_origin, monthCount, startMonth, covSpan, span, rate);
-% output{1,col} = sprintf('srs_%d',span);
-% output{2,col} = netValue;
-% output{3,col} = weight;
-% col = col+1;
-
-% [netValue,weight] = maxSR(data_origin, monthCount, startMonth, covSpan, span, rate);
-% output{1,col} = sprintf('srs_%d',span);
-% output{2,col} = netValue;
-% output{3,col} = weight;
-% col = col+1;
-
-
-
 
 
 output{5,1} = 'M_ret';
@@ -283,13 +135,4 @@ end
 % output{7,n} = output{5,n} / output{6,n};
 % output{8,n} = maxdrawdown(output{2,n}(1:monthEnd))*100;
 % 
-
-% for n = 2:size(output,2)
-%     row = 23;
-%     for yr = 14:12:monthEnd
-%         output{row,1} = sprintf('Y_vot_%d',yr);
-%         output{row,n} = std(output{4,n}(yr-12:yr) * sqrt(12) * 100);
-%         row = row+1;
-%     end
-% end
 
